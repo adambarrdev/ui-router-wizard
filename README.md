@@ -1,4 +1,4 @@
-# ui-router-demo
+# ui-router-wizard
 
 ## Install ##
 
