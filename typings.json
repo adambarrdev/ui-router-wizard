@@ -1,0 +1,11 @@
+{
+  "name": "vscode-starter",
+  "version": false,
+  "ambientDependencies": {
+    "angular": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "bootstrap": "github:DefinitelyTyped/DefinitelyTyped/bootstrap/bootstrap.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "angular-ui-router": "github:DefinitelyTyped/DefinitelyTyped/angular-ui-router/angular-ui-router.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "angular-ui-bootstrap": "github:DefinitelyTyped/DefinitelyTyped/angular-ui-bootstrap/angular-ui-bootstrap.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d"
+  }
+}

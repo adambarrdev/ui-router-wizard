@@ -1,0 +1,8 @@
+
+
+node_modules
+build
+public/app
+public/templates
+public/js
+typings
