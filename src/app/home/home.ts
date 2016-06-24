@@ -41,8 +41,9 @@ namespace app {
             self.setActiveStep(this.$state.current.name);
 
             self.$rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState) {
-                let prev = fromState.data ? fromState.data.prev : '';
-                self.$state.back = (toState.name === prev);
+                let fromStepIndex = fromState.data ? fromState.data.stepIndex : 0;
+                let toStepIndex = toState.data ? toState.data.stepIndex : 0;
+                self.$state.back = (fromStepIndex > toStepIndex);
                 self.setActiveStep(toState.name);
             });
         }
