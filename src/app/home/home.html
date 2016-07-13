@@ -7,24 +7,41 @@
 <ul class="nav nav-pills nav-justified">
     <li ng-repeat="step in vm.steps" ui-sref-active="active">
         <a ui-sref="{{step.sref}}">
-            <i ng-class="step.iconClass"></i><br />
-            {{step.name}}<br />
+            <i ng-class="step.iconClass"></i><br /> {{step.name}}
+            <br />
             <span class="badge">{{step.count}}</span>
         </a>
     </li>
 </ul>
 <div class="spacer"></div>
-<p>
-    <button class="btn btn-default" ng-disabled="vm.activeStep.isFirstStep" ng-click="vm.previousStep()">
+<div class="row text-center">
+    <div class="col-xs-2 text-right">
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <button class="btn btn-default" ng-disabled="vm.activeStep.isFirstStep" ng-click="vm.previousStep()">
         <i class="fa fa-chevron-left"></i>
         Prev
     </button>
-    <button class="btn btn-default" ng-disabled="vm.activeStep.isLastStep" ng-click="vm.nextStep()">
+
+    </div>
+    <div class="col-xs-8">
+        <span>Active Step: {{vm.activeStep.name}}</span>
+        <div class="view-animate-container" ng-class="{'view-back': vm.$state.back}">
+            <div class="well" ui-view></div>
+        </div>
+
+    </div>
+    <div class="col-xs-2 text-left">
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <button class="btn btn-default" ng-disabled="vm.activeStep.isLastStep" ng-click="vm.nextStep()">
         Next
         <i class="fa fa-chevron-right"></i>
     </button>
-    <span>Active Step: {{vm.activeStep.name}}</span>
-</p>
-<div class="view-animate-container" ng-class="{'view-back': vm.$state.back}">
-    <div ui-view></div>
+
+    </div>
 </div>
